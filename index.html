@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Sorting Visualizer</h1>
+        <div class="input-section">
+            <input type="text" id="customInput" placeholder="e.g. 10, 50, 20, 80, 30">
+            <button onclick="loadCustomArray()">Load Data</button>
+            <button onclick="generateRandomArray(40)">Random</button>
+            <button onclick="generateRandomArray(300)">Massive</button>
+        </div>
+        <div class="algo-section">
+            <select id="algo">
+                <option value="bubble">Bubble Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
+                <option value="heap">Heap Sort</option>
+                <option value="shell">Shell Sort</option>
+                <option value="cocktail">Cocktail Sort</option>
+                <option value="bogo">Bogo Sort</option>
+            </select>
+            <label>Speed: <input type="range" id="speed" min="1" max="200" value="180"></label>
+            <button id="startBtn" class="start-btn" onclick="startSort()">Start</button>
+        </div>
+    </div>
+    <div id="container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
